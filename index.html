@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EliteBin Cleaning | La Grange TX</title>
+
+<style>
+:root{
+  --green:#22c55e;
+  --blue:#0ea5e9;
+  --dark:#020617;
+  --card:rgba(15,23,42,0.72);
+}
+
+body{
+  margin:0;
+  font-family:Segoe UI, sans-serif;
+  color:#e5e7eb;
+  background: radial-gradient(circle at top, #0ea5e9, #1e293b 35%, #020617 75%, #000);
+}
+
+.banner{
+  background: linear-gradient(90deg,var(--green),#16a34a);
+  color:black;
+  text-align:center;
+  padding:12px;
+  font-weight:900;
+}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:22px 60px;
+  background:rgba(2,6,23,0.7);
+  backdrop-filter: blur(14px);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo-box{
+  width:46px;
+  height:46px;
+  border-radius:14px;
+  background:linear-gradient(135deg,var(--green),var(--blue));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:900;
+  color:black;
+  box-shadow:0 0 25px rgba(34,197,94,0.4);
+}
+
+nav a{
+  color:#e5e7eb;
+  margin-left:20px;
+  text-decoration:none;
+  transition:0.3s;
+}
+nav a:hover{color:var(--green); transform:translateY(-2px);}
+
+.hero{
+  text-align:center;
+  padding:150px 20px;
+  background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+  url('https://images.unsplash.com/photo-1581578731548-c64695cc6952') center/cover;
+}
+
+.hero h2{font-size:64px; margin-bottom:10px;}
+.hero p{color:#9ca3af; font-size:18px;}
+
+.btn{
+  display:inline-block;
+  margin-top:28px;
+  padding:15px 30px;
+  background:linear-gradient(135deg,var(--green),var(--blue));
+  color:black;
+  font-weight:900;
+  border-radius:14px;
+  text-decoration:none;
+  transition:0.3s;
+}
+.btn:hover{transform:scale(1.07);}
+
+.section{
+  max-width:1100px;
+  margin:auto;
+  padding:110px 25px;
+}
+
+.section h2{
+  color:var(--green);
+  font-size:38px;
+  margin-bottom:25px;
+}
+
+.section p.subtitle{
+  color:#94a3b8;
+  margin-bottom:35px;
+  line-height:1.6;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
+}
+
+.card{
+  background:var(--card);
+  border:1px solid rgba(255,255,255,0.08);
+  padding:26px;
+  border-radius:18px;
+  transition:0.4s;
+}
+
+.card:hover{
+  transform:translateY(-12px) scale(1.03);
+  border-color:var(--green);
+  box-shadow:0 25px 50px rgba(0,0,0,0.45);
+}
+
+.service-title{
+  font-weight:800;
+  margin-bottom:8px;
+}
+
+.service-desc{
+  color:#94a3b8;
+  font-size:14px;
+  line-height:1.5;
+}
+
+.price{
+  text-align:center;
+}
+.price h3{
+  font-size:34px;
+  color:var(--green);
+  margin-bottom:5px;
+}
+.price p{
+  color:#94a3b8;
+}
+.price:hover h3{
+  transform:scale(1.25);
+  text-shadow:0 0 25px var(--green);
+}
+
+.img-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+  gap:22px;
+}
+
+.img-grid img{
+  width:100%;
+  border-radius:18px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.4);
+  transition:0.4s;
+}
+.img-grid img:hover{transform:scale(1.05);}
+
+.highlight{
+  background:linear-gradient(135deg, rgba(34,197,94,0.08), rgba(14,165,233,0.08));
+  padding:20px;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,0.06);
+  margin-top:15px;
+  color:#cbd5e1;
+}
+
+form{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  max-width:700px;
+}
+
+input,textarea{
+  padding:14px;
+  border-radius:12px;
+  border:none;
+  background:#0f172a;
+  color:white;
+  border:1px solid #1f2937;
+}
+
+button{
+  background:linear-gradient(135deg,var(--green),var(--blue));
+  border:none;
+  padding:14px;
+  border-radius:12px;
+  font-weight:900;
+  cursor:pointer;
+}
+
+/* CASH APP UPGRADED */
+.pay{
+  margin-top:30px;
+  padding:35px;
+  border-radius:22px;
+  text-align:center;
+  background:linear-gradient(135deg,#0f172a,#0b1220);
+  border:1px solid rgba(34,197,94,0.4);
+  box-shadow:0 0 30px rgba(34,197,94,0.15);
+}
+
+.pay h3{
+  font-size:22px;
+  margin-bottom:10px;
+  color:#22c55e;
+}
+
+.pay p{
+  font-size:18px;
+  font-weight:700;
+  letter-spacing:0.5px;
+}
+
+.pay small{
+  color:#94a3b8;
+  display:block;
+  margin-top:6px;
+}
+
+.pay a{
+  display:inline-block;
+  margin-top:15px;
+  padding:12px 22px;
+  background:linear-gradient(135deg,#22c55e,#16a34a);
+  color:black;
+  border-radius:14px;
+  font-weight:900;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.pay a:hover{
+  transform:scale(1.05);
+}
+
+iframe{
+  width:100%;
+  height:320px;
+  border-radius:18px;
+  margin-top:25px;
+  border:none;
+}
+
+footer{
+  text-align:center;
+  padding:40px;
+  background:#020617;
+  color:#94a3b8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="banner">🚀 ELITEBIN CLEANING — LAUNCHING SUMMER 2026</div>
+
+<nav>
+  <div class="logo">
+    <div class="logo-box">EB</div>
+    <div>
+      <strong>EliteBin Cleaning</strong><br>
+      <span style="font-size:12px;color:#94a3b8;">by Gavin Wilson</span>
+    </div>
+  </div>
+  <div>
+    <a href="#services">Services</a>
+    <a href="#why">Why Us</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Book</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h2>Cleaner Bins. Cleaner Life.</h2>
+  <p>La Grange, TX • Fast • Affordable • Professional</p>
+  <a class="btn" href="#contact">Book Now</a>
+</section>
+
+<section class="section" id="services">
+  <h2>Our Services</h2>
+  <p class="subtitle">We deep clean trash bins using high-pressure washing to remove bacteria, grime, and odor buildup.</p>
+
+  <div class="grid">
+    <div class="card">
+      <div class="service-title">🧼 Residential Cleaning</div>
+      <div class="service-desc">Fresh, sanitized trash bins for your home with full deodorizing treatment.</div>
+    </div>
+
+    <div class="card">
+      <div class="service-title">🏢 Commercial Service</div>
+      <div class="service-desc">Large dumpster cleaning for businesses, apartments, and properties.</div>
+    </div>
+
+    <div class="card">
+      <div class="service-title">💨 Odor Removal</div>
+      <div class="service-desc">Removes strong smells and bacteria for a cleaner environment.</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="why">
+  <h2>Why Choose Us</h2>
+  <div class="grid">
+    <div class="card">✔ Local La Grange service you can trust</div>
+    <div class="card">✔ Fast same-day or next-day cleaning</div>
+    <div class="card">✔ Professional deep-clean equipment</div>
+    <div class="card">✔ Affordable & transparent pricing</div>
+  </div>
+</section>
+
+<section class="section" id="gallery">
+  <h2>Before & After</h2>
+  <p class="subtitle">See the transformation from dirty, bacteria-filled bins to fresh and sanitized results.</p>
+
+  <div class="img-grid">
+    <img src="https://images.unsplash.com/photo-1604187351574-c75ca79f5807">
+    <img src="https://images.unsplash.com/photo-1609592806596-4d3b3b3c3b1a">
+  </div>
+</section>
+
+<section class="section" id="pricing">
+  <h2>Pricing</h2>
+
+  <div class="grid">
+    <div class="card price">
+      <h3>$15</h3>
+      <p>Basic Bin Cleaning</p>
+      <div class="highlight">Quick wash + deodorizing spray</div>
+    </div>
+
+    <div class="card price">
+      <h3>$20</h3>
+      <p>Standard Clean</p>
+      <div class="highlight">Deep wash + odor treatment</div>
+    </div>
+
+    <div class="card price">
+      <h3>$25</h3>
+      <p>Premium Package</p>
+      <div class="highlight">Full wash + odor treatment (best value)</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <h2>Book Now</h2>
+
+  <form action="https://formsubmit.co/gavinwilson362@gmail.com" method="POST">
+    <input name="name" placeholder="Name" required>
+    <input name="address" placeholder="Address" required>
+    <input name="phone" placeholder="Phone" required>
+    <textarea name="message" placeholder="What do you need cleaned?"></textarea>
+
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="New EliteBin Booking">
+
+    <button type="submit">Submit Booking</button>
+  </form>
+
+  <p>📞 830-888-3434</p>
+  <p>📧 gavinwilson362@gmail.com</p>
+
+  <div class="pay">
+    <h3>Cash App Payment</h3>
+    <p>$gavinishim1014</p>
+    <small>Send payment after booking confirmation</small>
+    <a href="https://cash.app/$gavinishim1014">Pay Now</a>
+  </div>
+
+  <iframe src="https://maps.google.com/maps?q=La%20Grange%20TX%2078945&output=embed"></iframe>
+</section>
+
+<footer>
+  © 2026 EliteBin Cleaning | Gavin Wilson
+</footer>
+
+</body>
+</html>
